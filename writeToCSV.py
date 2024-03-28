@@ -25,6 +25,10 @@ for line in simFile:
         returnLat, returnLon = functions.calcLatandLon()
         lat = returnLat()
         lon = returnLon()
+        gpsSats = functions.gpsSats()
+        tiltX = functions.tiltX()
+        tiltY = functions.tiltY()
+        rotation = functions.rotation()
         
         #Displaying those variables in their respective columns
         initCSV.df.at[rowNum,'Altitude'] = str(altitude) + " meters"
@@ -42,6 +46,12 @@ for line in simFile:
         initCSV.df.at[rowNum,'GPS Altitude'] = str(altitude) + " meters"
         initCSV.df.at[rowNum,'GPS Latitude'] = lat
         initCSV.df.at[rowNum,'GPS Longitude'] = lon
+        initCSV.df.at[rowNum,'GPS Sats'] = gpsSats
+        initCSV.df.at[rowNum,'Tilt x'] = tiltX
+        initCSV.df.at[rowNum,'Tilt y'] = tiltY
+        initCSV.df.at[rowNum,'Rotation'] = rotation
+
+        
         
 
 
