@@ -2,6 +2,7 @@ import time
 from datetime import datetime
 import math 
 from geopy.geocoders import Nominatim
+import random
 
 def calcAltitude(airPressure):
     pressure_value = float(airPressure[-1])
@@ -63,3 +64,15 @@ def calcLatandLon():
         return getLoc.longitude
 
     return returnLat, returnLon
+
+def gpsSats():
+    return random.randint(8,22)
+
+def tiltX():
+    return random.randint(-90,90)
+
+def tiltY():
+    return random.randint(-180,180)
+
+def rotation():
+    return random.randint(-180,180)
