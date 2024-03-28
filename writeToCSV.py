@@ -76,12 +76,9 @@ for line in simFile:
         GPSTime = calculateCurrentTime()
         MissionTime = calculateTime(startTime)
         state = determineState()
-        if altitude is not None:
-            print(altitude)
-            df.at[rowNum,'Altitude'] = altitude
-            df.to_csv('cansat_test.csv', index=False)
-            rowNum = rowNum + 1
-            time.sleep(.2)
+        #if altitude is not None:
+        #print(altitude)
+        df.at[rowNum,'Altitude'] = altitude
         df.at[rowNum,'GPS Time'] = GPSTime
         df.at[rowNum,'Mission Time'] = MissionTime
         df.at[rowNum,'Packet Count'] = packetCount
@@ -91,6 +88,9 @@ for line in simFile:
 
 
 
+        df.to_csv('cansat_test.csv', index=False)
         packetCount = packetCount + 1
+        rowNum = rowNum + 1
+        time.sleep(.2)
 
 simFile.close()
