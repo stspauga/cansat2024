@@ -3,6 +3,23 @@ import datetime
 from dash import dcc, html, Input, Output, callback
 import pandas as pd
 import plotly.express as px
+import webbrowser
+import subprocess
+
+print("YO")
+
+# Execute the command and capture its output
+result = subprocess.run("lsof -i :8050 | awk 'NR>1 {print $2}' | head -n 1", shell=True, capture_output=True, text=True)
+
+# Check if the output is not empty
+if result.stdout:
+    # Print the output, stripping any trailing newlines
+    print(result.stdout.strip())
+    PIDstring = result.stdout.strip()
+    subprocess.run(f"kill {PIDstring}", shell=True, capture_output=True, text=True)
+else:
+    print("No process found on port 8050")
+
 
 # Execute the command and capture its output
 result = subprocess.run("lsof -i :8050 | awk 'NR>1 {print $2}' | head -n 1", shell=True, capture_output=True, text=True)
