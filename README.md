@@ -4,6 +4,7 @@
 The mission involves designing a Cansat, composed of a container and a probe, to simulate a planetary landing sequence. The Cansat will be launched to an altitude of 670 to 725 meters and deployed at apogee, facing uncontrolled orientation and substantial shock forces, which it must withstand. Following deployment, it will descend via parachute at 15 m/s. At 500 meters, it will release a probe, which employs a heat shield as an aerobraking device to slow down to 20 m/s or less, without using a parachute or similar device. At 200 meters altitude, the probe will deploy a parachute to reduce its speed to 5 m/s until landing. Post-landing, the probe will self-right and raise a flag, while a video camera pointing downward records the descent.
 
 ### Software Role
+---
 The job of the software team includes the following:
 1. Establish a connection between ground control (the computer) and the radio on board the rocket
 2. Ensure each on board sensor is communicating with the SD card/XBEE radio on board the rocket
