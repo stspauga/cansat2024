@@ -36,14 +36,19 @@ To run the software, take a look at the Makefile. It will have the keywords to e
 ---
 CMD,2124,CX,<ON_OFF>
   - Enables the payload to begin data transmission/collection and displays an empty graph
+
 CMD,2124,ST,GPS
   - Sets time to current GPS location time (eg. 13:35:59)
+
 CMD,2124,SIM,<MODE>
   - Enables and activates sim mode
+
 CMD,2124,SIMP,<PRESSURE>
   - Receives packets from txt file on SD card in rocket
+
 CMD,2124,CAL
   - Calibrates altitude to zero
+
 CMD,2124,BCN<ON_OFF>
   - Controls audio beacon
 
