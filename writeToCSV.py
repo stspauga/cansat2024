@@ -31,7 +31,7 @@ for line in simFile:
         rotation = functions.rotation()
         
         #Displaying those variables in their respective columns
-        initCSV.df.at[rowNum,'Altitude'] = str(altitude) + " meters"
+        initCSV.df.at[rowNum,'Altitude'] = str(altitude)
         initCSV.df.at[rowNum,'GPS Time'] = GPSTime
         initCSV.df.at[rowNum,'Mission Time'] = MissionTime
         initCSV.df.at[rowNum,'Packet Count'] = packetCount
